@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>João Vitor — Estudante Ciência da Computação</title>
 
-  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts: Syne (display) + Source Code Pro (mono/body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Source+Code+Pro:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -283,7 +281,6 @@
     @keyframes typing { from { width: 0 } to { width: 100% } }
     @keyframes blink { from,to { border-color: transparent } 50% { border-color: var(--accent); } }
 
-    /* ─── Experience Timeline ───────────────────────────────────── */
     .timeline-item {
       position: relative;
       padding-left: 28px;
@@ -307,7 +304,7 @@
     }
     .timeline-item:last-child::after { display: none; }
 
-    /* ─── Contact Card ──────────────────────────────────────────── */
+    /*Contato*/
     .contact-link {
       display: flex;
       align-items: center;
@@ -327,7 +324,6 @@
       color: var(--accent);
     }
 
-    /* ─── Theme Toggle ──────────────────────────────────────────── */
     #theme-toggle {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -340,7 +336,6 @@
     }
     #theme-toggle:hover { border-color: var(--accent); }
 
-    /* ─── Fade-in animation ─────────────────────────────────────── */
     .fade-up {
       opacity: 0;
       transform: translateY(24px);
@@ -351,7 +346,6 @@
       transform: none;
     }
 
-    /* ─── Footer ────────────────────────────────────────────────── */
     footer {
       border-top: 1px solid var(--border);
       text-align: center;
@@ -361,7 +355,6 @@
       letter-spacing: .06em;
     }
 
-    /* ─── Misc ──────────────────────────────────────────────────── */
     section { position: relative; z-index: 1; }
     .accent { color: var(--accent); }
     .muted { color: var(--muted); }
@@ -370,12 +363,8 @@
 </head>
 <body>
 
-  <!-- ─── Cursor Glow ──────────────────────────────────────────── -->
   <div id="cursor-glow"></div>
 
-  <!-- ═══════════════════════════════════════════════════════════ -->
-  <!--  NAV                                                        -->
-  <!-- ═══════════════════════════════════════════════════════════ -->
   <nav>
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       <!-- Logo -->
@@ -383,7 +372,6 @@
         JV<span class="accent">.</span>
       </a>
 
-      <!-- Links (hidden on very small screens) -->
       <div class="hidden sm:flex items-center gap-8">
         <a href="#sobre"       class="nav-link">Sobre</a>
         <a href="#habilidades" class="nav-link">Skills</a>
@@ -392,19 +380,14 @@
         <a href="#contato"     class="nav-link">Contato</a>
       </div>
 
-      <!-- Theme toggle -->
       <button id="theme-toggle" aria-label="Alternar tema">🌙</button>
     </div>
   </nav>
 
-  <!-- ═══════════════════════════════════════════════════════════ -->
-  <!--  HERO                                                       -->
-  <!-- ═══════════════════════════════════════════════════════════ -->
   <section id="home" style="min-height:100vh;display:flex;align-items:center;padding-top:80px;">
     <div class="max-w-6xl mx-auto px-6 w-full py-20">
 
       <div class="hero-grid">
-        <!-- Left: text -->
         <div style="padding-right:48px;">
           <p class="accent" style="font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:20px;font-family:'Source Code Pro',monospace;">
             &gt; hello_world.py
@@ -415,14 +398,12 @@
             <span class="accent">Vitor</span>
           </h1>
 
-          <!-- Animated subtitle -->
           <p class="typewriter" style="font-family:'Source Code Pro',monospace;font-size:1rem;color:var(--muted);margin-bottom:32px;">
             Estudante Ciência da Computação
           </p>
 
           <p style="color:var(--muted);line-height:1.8;max-width:420px;font-size:.9rem;margin-bottom:40px;">
-            <!-- ✏️  EDITE: Sua bio em 2-3 frases. -->
-            Apaixonado por TI. Me especializando em Python, Flask e MySQL — construindo sistemas e queries que performam de verdade.
+            Apaixonado por tecnologia. Me especializando em Python, Flask e MySQL — construindo sistemas e queries que performam de verdade.
           </p>
 
           <div style="display:flex;gap:12px;flex-wrap:wrap;">
@@ -435,20 +416,16 @@
           </div>
         </div>
 
-        <!-- Divider -->
         <div class="hero-divider"></div>
 
-        <!-- Right: terminal-style info block -->
         <div style="padding-left:48px;display:flex;align-items:center;">
           <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:32px;width:100%;font-family:'Source Code Pro',monospace;font-size:.82rem;">
-            <!-- Terminal top bar -->
             <div style="display:flex;gap:8px;margin-bottom:24px;">
               <div style="width:12px;height:12px;border-radius:50%;background:#ff5f57;"></div>
               <div style="width:12px;height:12px;border-radius:50%;background:#ffbd2e;"></div>
               <div style="width:12px;height:12px;border-radius:50%;background:#28ca42;"></div>
             </div>
 
-            <!-- Terminal content -->
             <p><span class="accent">const</span> dev = {</p>
             <p style="padding-left:20px;color:var(--muted);">nome: <span style="color:var(--text)">"João Vitor"</span>,</p>
             <p style="padding-left:20px;color:var(--muted);">foco: <span style="color:var(--text)">"Python &amp; Dados"</span>,</p>
@@ -467,19 +444,15 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════ -->
-  <!--  SOBRE                                                      -->
-  <!-- ═══════════════════════════════════════════════════════════ -->
   <section id="sobre" style="padding:100px 0;">
     <div class="max-w-6xl mx-auto px-6">
       <div class="fade-up" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
 
-        <!-- Text -->
         <div>
           <h2 class="section-title" style="font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;margin-bottom:24px;">
             Sobre mim
           </h2>
-          <!-- ✏️  EDITE: Sua história/bio completa -->
+ 
           <p style="color:var(--muted);line-height:1.9;margin-bottom:16px;font-size:.9rem;">
             Desenvolvedor focado em backend Python e análise de dados, buscando expêriencias que resolvam problemas reais.
           </p>
@@ -488,9 +461,7 @@
           </p>
         </div>
 
-        <!-- Stats / highlights -->
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-          <!-- ✏️  EDITE: Esses números/stats -->
           <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center;">
             <p style="font-family:'Syne',sans-serif;font-size:2.5rem;font-weight:800;color:var(--accent);">4</p>
             <p style="color:var(--muted);font-size:.8rem;margin-top:4px;">Anos de estudo</p>
@@ -513,9 +484,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════ -->
-  <!--  HABILIDADES                                                -->
-  <!-- ═══════════════════════════════════════════════════════════ -->
   <section id="habilidades" style="padding:100px 0;background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
     <div class="max-w-6xl mx-auto px-6">
 
@@ -526,7 +494,6 @@
         </h2>
       </div>
 
-      <!-- ✏️  EDITE: Adicione/remova skills e ajuste as porcentagens (data-level) -->
       <div class="fade-up" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
 
         <!-- Python -->
@@ -602,9 +569,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════ -->
-  <!--  EXPERIÊNCIA / TRAJETÓRIA                                   -->
-  <!-- ═══════════════════════════════════════════════════════════ -->
   <section id="experiencia" style="padding:100px 0;">
     <div class="max-w-4xl mx-auto px-6">
 
@@ -615,17 +579,16 @@
         </h2>
       </div>
 
-      <!-- ✏️  EDITE: Adicione/remova itens da timeline abaixo -->
       <div class="fade-up" style="display:flex;flex-direction:column;gap:40px;">
 
         <div class="timeline-item">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
             <div>
               <h3 style="font-size:1rem;font-weight:700;margin-bottom:4px;">Desenvolvedor Python (Estudante)</h3>
-              <!-- ✏️  EDITE: Nome da empresa/cliente -->
+
               <p style="color:var(--accent);font-size:.82rem;font-family:'Source Code Pro',monospace;">Projetos pessoais</p>
             </div>
-            <!-- ✏️  EDITE: Período -->
+
             <span style="color:var(--muted);font-size:.78rem;font-family:'Source Code Pro',monospace;white-space:nowrap;">2024 — atual</span>
           </div>
           <p style="color:var(--muted);font-size:.85rem;line-height:1.8;">
@@ -636,7 +599,7 @@
         <div class="timeline-item">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
             <div>
-              <!-- ✏️  EDITE: Nome do curso/certificação -->
+
               <h3 style="font-size:1rem;font-weight:700;margin-bottom:4px;">Ciência da Computação</h3>
               <p style="color:var(--accent);font-size:.82rem;font-family:'Source Code Pro',monospace;">Instituição — Anhanguera</p>
             </div>
@@ -664,9 +627,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════ -->
-  <!--  PROJETOS                                                   -->
-  <!-- ═══════════════════════════════════════════════════════════ -->
   <section id="projetos" style="padding:100px 0;background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
     <div class="max-w-6xl mx-auto px-6">
 
@@ -677,29 +637,22 @@
         </h2>
       </div>
 
-      <!-- ✏️  EDITE: Adicione/altere projetos abaixo. Cada .project-card é um projeto. -->
       <div class="fade-up" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;">
 
-        <!-- ─── PROJETO 1 ─────────────────────────────────────── -->
         <div class="project-card">
-          <!-- ✏️  EDITE: Emoji ou imagem do projeto -->
           <div class="project-header">
             <span style="z-index:1;">🔧</span>
           </div>
           <div style="padding:24px;flex:1;display:flex;flex-direction:column;gap:12px;">
-            <!-- ✏️  EDITE: Nome do projeto -->
             <h3 style="font-size:1.05rem;font-weight:700;">Projeto 1</h3>
-            <!-- ✏️  EDITE: Descrição curta — o que faz e qual problema resolve -->
             <p style="color:var(--muted);font-size:.84rem;line-height:1.7;flex:1;">
               Descrição do seu projeto virá aqui. Explique o que ele faz, qual problema resolve e qual impacto tem. Seja direto e objetivo.
             </p>
-            <!-- ✏️  EDITE: Tags de tecnologia -->
             <div style="display:flex;flex-wrap:wrap;gap:6px;">
               <span class="tag">Python</span>
               <span class="tag">MySQL</span>
               <span class="tag">Flask</span>
             </div>
-            <!-- ✏️  EDITE: Links do projeto -->
             <div style="display:flex;gap:10px;margin-top:8px;">
               <a href="#" class="btn-ghost" style="font-size:.78rem;padding:7px 16px;">
                 ⌥ GitHub
@@ -711,7 +664,7 @@
           </div>
         </div>
 
-        <!-- ─── PROJETO 2 ─────────────────────────────────────── -->
+  
         <div class="project-card">
           <div class="project-header">
             <span style="z-index:1;">📊</span>
@@ -756,9 +709,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════ -->
-  <!--  CONTATO                                                    -->
-  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  CONTATO  -->
   <section id="contato" style="padding:100px 0;">
     <div class="max-w-2xl mx-auto px-6 text-center">
 
@@ -772,7 +723,6 @@
         </p>
       </div>
 
-      <!-- ✏️  EDITE: Seus links reais -->
       <div class="fade-up" style="display:flex;flex-direction:column;gap:14px;">
 
         <!-- LinkedIn -->
@@ -815,9 +765,7 @@
     <p style="margin-top:8px;">Python · MySQL · feito com ☕</p>
   </footer>
 
-  <!-- ═══════════════════════════════════════════════════════════ -->
-  <!--  JAVASCRIPT                                                 -->
-  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  JAVASCRIPT  -->
   <script>
     /* ─── Cursor Glow ─────────────────────────────────────────── */
     const glow = document.getElementById('cursor-glow');
